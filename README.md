@@ -47,6 +47,22 @@ Setting your host allows users to go directly to the app. Follow up with your OS
 var/www/html/[your_folder]/public
 ```
 
+### Setup Your Database
+
+You need to setup your database so our CMS can grab and store content to be used.
+
+Create the database "project" so our CMS can use the database.
+
+Set a new user with these credentials with access to your database "project" you created.
+Username
+```
+Timely_CMS
+```
+Password
+```
+AKFY21ED
+```
+
 ## Built With
 
 * [Laravel](https://laravel.com/) - The web framework used
