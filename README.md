@@ -1,4 +1,4 @@
-#  Timely_CMS
+## Timely-CMS
 The Simple, but powerful open source CMS system.
 
 ## Getting Started
