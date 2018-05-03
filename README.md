@@ -1,4 +1,4 @@
-# Timely-CMS
+# Timely_CMS
 The Simple, but powerful open source CMS system.
 
 ## Getting Started
@@ -39,13 +39,21 @@ You should get something sorta like this
 Application key [base64:pnPq9UoVZlg0nnruNdwJV5dIcDJ+sJyCYLvOT0qwVok=] set successfully.
 ```
 
-### Set Your Host
-
-Setting your host allows users to go directly to the app. Follow up with your OS provider for instructions on completing this.
-
+### Set Your Host 
+Setting your host allows users to go directly to the app. Follow up with your OS provider for instructions on completing this. DigitalOcean has a great guide for Ubuntu 16.04+ distros. [Link To Guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-16-04)
+``` var/www/html/[your_folder]/public ``` 
+### Host .conf example 
+The host file is very important to getting your site working properly. Use the above example for reference. 
+``` 
+<VirtualHost *:80> 
+ServerAdmin admin@test.com 
+ServerName social.timelysystems.com 
+ServerAlias social.timelystems.com 
+DocumentRoot /var/www/html/social/public 
+</VirtualHost>
 ```
-var/www/html/[your_folder]/public
-```
+### Setup Your DNS With Your Provider 
+Contact your server provider or dns provider to setup your subdomain. In the above example, the subdomain would be social.timelysystems.com. Through DigitalOcean, this is as simple as accesssing your droplet networking, click on your domain, then click on the "A record" option. Under Hostname type in your sub domain. We used social in our above example. You will then click in the "Will Direct To" option, then select your droplet.
 
 ### Setup Your Database
 
